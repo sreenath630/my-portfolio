@@ -9,7 +9,7 @@
 <body>
 
 <nav>
-    <h2>Sreenath</h2>
+    <h2 class="logo">Sreenath</h2>
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -19,23 +19,22 @@
 </nav>
 
 <header>
-    <h1>Hello, I'm Sreenath 👋</h1>
+    <h1>Hi, I'm <span>Sreenath</span></h1>
     <p>Frontend Developer | BCA Student</p>
-    <button onclick="scrollToProjects()">View Projects</button>
+    <button onclick="scrollToSection('projects')">View My Work</button>
 </header>
 
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I am a passionate BCA student focused on building modern,
-        responsive and user-friendly websites. I am currently
-        looking for internship opportunities in Web Development.
+        Passionate BCA student focused on building responsive and modern websites.
+        Actively seeking internship opportunities in Web Development.
     </p>
 </section>
 
 <section id="skills">
     <h2>Skills</h2>
-    <div class="cards">
+    <div class="grid">
         <div class="card">HTML</div>
         <div class="card">CSS</div>
         <div class="card">JavaScript</div>
@@ -45,14 +44,14 @@
 
 <section id="projects">
     <h2>Projects</h2>
-    <div class="cards">
+    <div class="grid">
         <div class="card">
             <h3>Portfolio Website</h3>
-            <p>Built using HTML, CSS & JS</p>
+            <p>Modern personal website built with HTML, CSS & JS.</p>
         </div>
         <div class="card">
             <h3>Calculator App</h3>
-            <p>Simple Web Calculator</p>
+            <p>Interactive calculator web application.</p>
         </div>
     </div>
 </section>
