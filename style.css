@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,85 +7,104 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f1a;
+    color: white;
     scroll-behavior: smooth;
 }
 
 nav {
-    background: #111;
-    color: white;
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
 }
 
 nav ul {
-    display: flex;
     list-style: none;
+    display: flex;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00f5ff;
 }
 
 header {
-    height: 90vh;
-    background: linear-gradient(135deg, #0d6efd, #6610f2);
-    color: white;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
     text-align: center;
+}
+
+header h1 span {
+    color: #00f5ff;
 }
 
 header button {
     margin-top: 20px;
-    padding: 12px 25px;
+    padding: 12px 30px;
     border: none;
-    background: white;
-    color: #0d6efd;
-    font-weight: bold;
-    border-radius: 25px;
+    background: linear-gradient(45deg, #00f5ff, #8e2de2);
+    color: white;
+    border-radius: 30px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+header button:hover {
+    transform: scale(1.05);
 }
 
 section {
-    padding: 80px 40px;
+    padding: 100px 50px;
     text-align: center;
 }
 
-.cards {
+h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #00f5ff;
+}
+
+.grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 30px;
 }
 
 .card {
-    background: #f4f4f4;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    width: 200px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    margin: 15px;
+    width: 250px;
+    border-radius: 15px;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    background: rgba(0,245,255,0.1);
 }
 
 footer {
     background: #111;
-    color: white;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
