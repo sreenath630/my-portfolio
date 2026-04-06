@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced To-Do List</title>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Theme Selector -->
+        <div class="theme-selector">
+            <button class="theme-btn active" data-theme="purple">💜</button>
+            <button class="theme-btn" data-theme="blue">💙</button>
+            <button class="theme-btn" data-theme="green">💚</button>
+            <button class="theme-btn" data-theme="pink">💗</button>
+            <button class="theme-btn" data-theme="orange">🧡</button>
+        </div>
+
+        <h1>✨ My To-Do List</h1>
+        
+        <!-- Input Section -->
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="What needs to be done?" />
+            
+            <div class="task-options">
+                <select id="prioritySelect">
+                    <option value="low">🟢 Low</option>
+                    <option value="medium" selected>🟡 Medium</option>
+                    <option value="high">🔴 High</option>
+                </select>
+                
+                <input type="date" id="dueDateInput" />
+                
+                <button id="addBtn">➕ Add</button>
+            </div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="high">High Priority</button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+        <!-- Statistics -->
+        <div class="stats">
+            <p><span id="totalTasks">0</span> total • <span id="completedTasks">0</span> completed • <span id="highPriorityTasks">0</span> high priority</p>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2>Edit Task</h2>
+            <input type="text" id="editTaskInput" placeholder="Task description" />
+            <select id="editPrioritySelect">
+                <option value="low">🟢 Low Priority</option>
+                <option value="medium">🟡 Medium Priority</option>
+                <option value="high">🔴 High Priority</option>
+            </select>
+            <input type="date" id="editDueDateInput" />
+            <div class="modal-buttons">
+                <button id="saveEditBtn">Save</button>
+                <button id="cancelEditBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="list.js"></script>
+</body>
+</html>
